@@ -9,33 +9,29 @@
 
 ::-webkit-scrollbar-thumb {
   background: #e0d7d0;
-  border-radius: 1em;
+  border-radius: 0.5em;
 }
 
 .mainMargin {
-  margin-left: 100px;
-  margin-right: 100px;
   margin-top: 100px;
-}
-
-.blank {
-  width: 50%;
+  margin-right: 100px;
+  margin-left: 100px;
 }
 
 * {
+  transition: all ease-out 1s;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
   font-family: Vazir !important;
   text-align: left;
   text-decoration: none;
-  transition: all ease-out 1s;
-  margin: 0;
-  padding: 0;
 }
 
 p {
-  margin: 0;
-  font-size: 25px;
   text-align: justify;
+  font-size: 25px;
+  margin: 0;
 }
 
 *:focus {
@@ -46,4 +42,134 @@ a {
   text-decoration: none;
   color: #000;
   cursor: pointer;
+}
+
+@keyframes item1 {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes item2 {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes item3 {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes item4 {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes item5 {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes item6 {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+.item1 {
+  animation: item1 3s 1s forwards;
+  flex-grow: 5;
+  height: 200px;
+}
+
+.item2 {
+  height: 125px;
+  flex-grow: 1;
+  animation: item2 3s 8s forwards;
+}
+
+.item3 {
+  flex-grow: 3;
+  animation: item3 3s 3s forwards;
+}
+
+.item4 {
+  animation: item4 3s 10s forwards;
+  flex-grow: 1;
+}
+
+.item5 {
+  flex-grow: 1;
+  animation: item5 3s 5s forwards;
+}
+
+.item6 {
+  animation: item6 3s 12s forwards;
+  flex-grow: 2;
+}
+
+#container {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.blank {
+  width: 50%;
+}
+
+.box {
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.box-item {
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+}
+
+.image {
+  margin: 5px;
+  border-radius: 3%;
+  opacity: 0; /* Hide the images initially */
+  width: 200px;
+  object-fit: cover;
 }
